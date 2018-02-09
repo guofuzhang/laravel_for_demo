@@ -90,6 +90,7 @@ class ShopController extends Controller
 
         $customData = json_encode(['model_name' => 'ewrwe', 'id' => 121]);//自定义参数
         $response = Alipay::tradePagePay($subject, $body, $out_trade_no, $total_amount,$customData);
+        dd($response);die;
         //输出表单
         return $response['redirect_url'];
     }
